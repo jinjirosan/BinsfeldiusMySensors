@@ -1,0 +1,62 @@
+//
+// !!! WARNING !!! AUTO-GENERATED FILE!
+// PLEASE DO NOT MODIFY IT AND USE "platformio.ini":
+// https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags
+//
+{
+    "configurations": [
+        {
+            "name": "PlatformIO",
+            "includePath": [
+                "/Users/rayflinkerbusch/GitHub/BinsfeldiusMySensors/code/HASS-IoT-3-RF_Nano-Living_Carbon_Sensor/include",
+                "/Users/rayflinkerbusch/GitHub/BinsfeldiusMySensors/code/HASS-IoT-3-RF_Nano-Living_Carbon_Sensor/src",
+                "/Users/rayflinkerbusch/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                "/Users/rayflinkerbusch/GitHub/BinsfeldiusMySensors/code/HASS-IoT-3-RF_Nano-Living_Carbon_Sensor/lib/SSD1306Ascii/src",
+                "/Users/rayflinkerbusch/GitHub/BinsfeldiusMySensors/code/HASS-IoT-3-RF_Nano-Living_Carbon_Sensor/lib/MySensors",
+                "/Users/rayflinkerbusch/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                "/Users/rayflinkerbusch/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                "/Users/rayflinkerbusch/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                "/Users/rayflinkerbusch/.platformio/packages/framework-arduino-avr/cores/arduino",
+                "/Users/rayflinkerbusch/.platformio/packages/framework-arduino-avr/variants/eightanaloginputs",
+                "/Users/rayflinkerbusch/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                "/Users/rayflinkerbusch/.platformio/packages/tool-unity",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "/Users/rayflinkerbusch/GitHub/BinsfeldiusMySensors/code/HASS-IoT-3-RF_Nano-Living_Carbon_Sensor/include",
+                    "/Users/rayflinkerbusch/GitHub/BinsfeldiusMySensors/code/HASS-IoT-3-RF_Nano-Living_Carbon_Sensor/src",
+                    "/Users/rayflinkerbusch/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                    "/Users/rayflinkerbusch/GitHub/BinsfeldiusMySensors/code/HASS-IoT-3-RF_Nano-Living_Carbon_Sensor/lib/SSD1306Ascii/src",
+                    "/Users/rayflinkerbusch/GitHub/BinsfeldiusMySensors/code/HASS-IoT-3-RF_Nano-Living_Carbon_Sensor/lib/MySensors",
+                    "/Users/rayflinkerbusch/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                    "/Users/rayflinkerbusch/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                    "/Users/rayflinkerbusch/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                    "/Users/rayflinkerbusch/.platformio/packages/framework-arduino-avr/cores/arduino",
+                    "/Users/rayflinkerbusch/.platformio/packages/framework-arduino-avr/variants/eightanaloginputs",
+                    "/Users/rayflinkerbusch/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                    "/Users/rayflinkerbusch/.platformio/packages/tool-unity",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=50100",
+                "ARDUINO_AVR_NANO",
+                "F_CPU=16000000L",
+                "ARDUINO_ARCH_AVR",
+                "ARDUINO=10808",
+                "__AVR_ATmega328P__",
+                ""
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "compilerPath": "/Users/rayflinkerbusch/.platformio/packages/toolchain-atmelavr/bin/avr-gcc",
+            "compilerArgs": [
+                "-mmcu=atmega328p",
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}
