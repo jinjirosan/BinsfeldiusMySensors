@@ -17,7 +17,7 @@
 
 #define HAS_DISPLAY                                 // Did you connect an OLED display? If you have connected a small OLED dislay it will show the latest measurements.
 
-#define SHOW_DATAVIZ                              // Show a basic datavizualisation on the display? This vizualisation is experimental and far from perfect, but might be fun to try.
+//#define SHOW_DATAVIZ                              // Show a basic datavizualisation on the display? This vizualisation is experimental and far from perfect, but might be fun to try.
 
 #define ALLOW_CONNECTING_TO_NETWORK                 // Connect wirelessly. Is this device allowed to connect to the network? For privacy or security reasons you may prefer a stand-alone device. If you do allow the device to connect, you can connect a toggle switch to pin 6 to change the connection state at any time.
 
@@ -175,7 +175,7 @@ void setup()
   oled.setFont(Adafruit5x7);
   
   oled.ssd1306WriteCmd(SSD1306_DISPLAYON);
-  oled.setScroll(false);
+  //oled.setScroll(false);
   oled.setCursor(0,0);
   oled.print(F("FINE DUST"));
   //delay(1000);
