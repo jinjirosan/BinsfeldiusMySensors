@@ -80,7 +80,7 @@
 #define MY_TRANSPORT_WAIT_READY_MS 10000            // Try connecting for 10 seconds. Otherwise just continue.
 //#define MY_RF24_CHANNEL 100                       // In EU the default channel 76 overlaps with wifi, so you could try using channel 100. But you will have to set this up on every device, and also on the controller.
 #define MY_RF24_DATARATE RF24_1MBPS                 // The datarate influences range. 1MBPS is the most widely supported. 250KBPS will give you more range.
-#define MY_NODE_ID 11                               // Giving a node a manual ID can in rare cases fix connection issues.
+#define MY_NODE_ID 5                             // Giving a node a manual ID can in rare cases fix connection issues.
 //#define MY_PARENT_NODE_ID 0                       // Fixating the ID of the gatewaynode can in rare cases fix connection issues.
 //#define MY_PARENT_NODE_IS_STATIC                  // Used together with setting the parent node ID. Daking the controller ID static can in rare cases fix connection issues.
 #define MY_SPLASH_SCREEN_DISABLED                   // Saves a little memory.
@@ -271,7 +271,7 @@ int freeRam () {
 #ifdef ALLOW_CONNECTING_TO_NETWORK
 void presentation()  {
   // Send the sketch version information to the gateway and Controller
-  sendSketchInfo(F("Office Temp Sensor"), F("1.0")); wait(RADIO_DELAY);
+  sendSketchInfo(F("Living Temp Sensor"), F("1.0")); wait(RADIO_DELAY);
 
   // Tell the MySensors gateway what kind of sensors this node has, and what their ID's on the node are, as defined in the code above.
   present(DATA_TRANSMISSION_CHILD_ID, S_BINARY, F("Data transmission")); wait(RADIO_DELAY);  
@@ -303,7 +303,7 @@ void send_values(){
 
 void setup() {
   Serial.begin(115200); // for serial debugging over USB.
-  Serial.println(F("Hello, I am the Office temperature and more sensor"));
+  Serial.println(F("Hello, I am a temperature and more sensor"));
 
 #ifdef ALLOW_CONNECTING_TO_NETWORK
   transmission_state = loadState(DATA_TRANSMISSION_CHILD_ID);
@@ -459,7 +459,7 @@ void loop()
       //
       case 0:                                       // If we are in the first second of the clock
 
-        temperature = bme280.getTemperature();
+        temperature = bme280.getTemperature() - 1.0; // Adjust temperature by subtracting 1 degree for calibration purposes;
   
         if(temperature != -127.00 && temperature != 85.00 && temperature != previous_temperature) { // Avoids working with measurement errors.
           previous_temperature = temperature;

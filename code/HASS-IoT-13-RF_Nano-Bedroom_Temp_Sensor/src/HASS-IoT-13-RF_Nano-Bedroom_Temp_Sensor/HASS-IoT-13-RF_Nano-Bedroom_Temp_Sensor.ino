@@ -460,7 +460,7 @@ void loop()
       //
       case 0:                                       // If we are in the first second of the clock
 
-        temperature = bme280.getTemperature();
+        temperature = bme280.getTemperature() - 1.4; // Adjust temperature by subtracting 1 degree for calibration purposes;
   
         if(temperature != -127.00 && temperature != 85.00 && temperature != previous_temperature) { // Avoids working with measurement errors.
           previous_temperature = temperature;
